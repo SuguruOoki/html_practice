@@ -1,0 +1,136 @@
+body {
+  width: 400px;
+  margin: 100px auto;
+}
+
+#outer-circle { 
+  width: 300px;
+  height: 300px;
+  border: 10px solid #FFD700;
+  border-radius: 50%;
+  position: relative;
+}
+
+ #inner-circle {
+   position: relative;
+   background: #a9aaab;
+   border-radius: 50%;
+   height: 50px;
+   width: 50px;
+   /*
+    Put top edge and left edge in the center
+   */
+   top: 42%;
+   left: 42%;
+   /* 
+    Offset the position correctly with
+    minus half of the width and minus half of the height 
+   */
+ }
+
+
+.content {
+  width: 40%; 
+  height: 40%;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  border: 5px solid #333;
+}
+
+/* top */
+.top {  
+  background-color: red;
+  animation: rotate_top 60s linear infinite;
+}
+@keyframes rotate_top { 
+  0% { 
+   transform: rotate(0deg) translateY(-100%) rotate(0deg);
+  }
+    100% {  
+    transform: rotate(360deg) translateY(-100%) rotate(-360deg);
+  }
+}
+
+/* right */
+.right { 
+  background-color: blue;
+  animation: rotate_right 60s linear infinite;
+}
+@keyframes rotate_right { 
+  0% { 
+   transform: rotate(0deg) translateX(100%) rotate(0deg);
+  }
+    100% {  
+    transform: rotate(360deg) translateX(100%) rotate(-360deg);
+  }
+}
+
+/* bottom */
+.bottom {
+  background-color: red; 
+  animation: rotate_bottom 60s linear infinite;
+}
+@keyframes rotate_bottom { 
+  0% { 
+   transform: rotate(0deg) translateY(100%) rotate(0deg);
+  }
+    100% {  
+    transform: rotate(360deg) translateY(100%) rotate(-360deg);
+  }
+}
+
+/* left */
+.left { 
+  background-color: blue;
+  animation: rotate_left 60s linear infinite;
+}
+@keyframes rotate_left { 
+  0% { 
+   transform: rotate(0deg) translateX(-100%) rotate(0deg);
+  }
+    100% {  
+    transform: rotate(360deg) translateX(-100%) rotate(-360deg);
+  }
+}
+
+.slide{
+  font:35px bold;
+  color:#000;
+  padding:25px;
+-webkit-transition: 1s ease-in-out;
+}
+ 
+.slide:hover{
+  text-indent:-999px;
+}
+
+#wave {
+  position: relative;
+  height: 70px;
+  width: 600px;
+  background: #e0efe3;
+}
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 340px;
+  height: 80px;
+  background-color: white;
+  right: -5px;
+  bottom: 40px;
+}
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 300px;
+  height: 70px;
+  background-color: #e0efe3;
+  left: 0;
+  bottom: 27px;
+}

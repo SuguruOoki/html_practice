@@ -1,0 +1,107 @@
+body {
+    background-color: yellow;
+}
+
+.spin {
+	animation: spin 10s linear infinite;
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: 300px;
+	left:-100px;
+}
+
+.triangle{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 800px;
+	left: 900px;
+	border-style: solid;
+	border-width: 0 300px 300px 300px;
+	border-color: transparent transparent #007bff transparent;
+}
+
+.pattern {
+  background: repeating-linear-gradient(45deg, #444, #444 10px, #888 0, #888 20px);
+}
+
+@keyframes spin {
+	0% {transform: rotate(360deg);}
+	100% {transform: rotate(0deg);}
+}
+
+#css-slider {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.slide-item {
+	width: 300px;
+	height: 200px;
+	float: left;
+	position: relative;
+}
+
+
+.slider-wrapper {
+	width: 300%;
+	position: relative;
+	left: 0;
+	will-change: transform;
+	animation: slider 10s infinite;
+}
+
+.red_balloon-wrapper {
+	animation: fuwafuwa 15s linear infinite;
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: 300px;
+	left:-100px;
+}
+
+.balloon-item {
+	float: right;
+	position: relative;
+}
+
+
+.blue_balloon-wrapper {
+	animation: fuwafuwa 15s linear infinite;
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: 300px;
+}
+
+@keyframes balloon {
+	0% { transform:translate(0, 500px);}
+	25% { transform:translate(50px, 250px);}
+	50% { transform:translate(-50px, 0px);}
+	75% { transform:translate(50px, -250px);}
+	100% { transform:translate(-50px, -500px);}
+}
+
+@keyframes slider {
+  0% { transform: translate(0,0); }
+  33% { transform: translate(-300px, -100px); }
+  66% { transform: translate(-600px, 100px); }
+  100% { transform: translate(-900px, -100px)}
+}
+
+#fan-hamee {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  vertical-align: center;
+  margin: auto;
+  opacity: 0.2;
+  font-size:1000%;
+  width: 100%;
+  height: 0px;
+}

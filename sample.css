@@ -1,0 +1,25 @@
+img {
+    width:100px;
+    border:0px;
+}
+
+div {
+	background: #999999;
+	margin: 100px;
+	width: 200px;
+	height: 200px;
+}
+
+span {
+	display: block;
+	margin: 0.5em;
+}
+
+.spin {
+	animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
